@@ -111,6 +111,7 @@ void loop() {
         pos = 0;
       }
     }
+if (pos >= sizeof(buf)) pos = 0;  // prevent overflows xd
   }
 
   if (millis() - lastDisplayUpdate > 300) {

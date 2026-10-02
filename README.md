@@ -13,3 +13,6 @@ The hardware receiver can be connected to a computer via a USB-C cable. Applicat
 ## Motivation
 
 The primary use case for our team is to use these devices to monitor several of our miniature autonomous vehicles and collect decision and telemetry data, such as battery charge, temperature, velocity, collision sensors and much more.
+
+
+WE'LL ADD MORE INFORMATION LATER ON...But its in the middle of the night and im tired

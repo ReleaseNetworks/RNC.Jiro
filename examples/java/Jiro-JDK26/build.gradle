@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'de.releaseteam'
+version = '1.0-SNAPSHOT'
+
+application {
+    mainClass = 'de.releaseteam.jiro.Main'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.fazecast:jSerialComm:[2.0.0,3.0.0)'
+    testImplementation platform('org.junit:junit-bom:5.10.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.withType(JavaExec).configureEach {
+    jvmArgs += ['--enable-native-access=ALL-UNNAMED']
+}
+
+test {
+    useJUnitPlatform()
+    jvmArgs += ['--enable-native-access=ALL-UNNAMED']
+}
